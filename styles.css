@@ -514,11 +514,123 @@ body {
     border-radius: 10px;
 }
 
-
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
     background: #222;
     color: white;
+}
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        /* background-color: #fff; */
+        background-color: #222;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-link {
+        color: #fff;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .diana,
+    .christian{
+        height: 5000px
+    }
+
+    .card-container {
+        justify-content: center; /* Center the cards */
+    }
+    .card {
+        width: 45%; /* Two cards per row */
+    }
+
+    .bonus {
+        flex-direction: column; /* Stack sections vertically */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card-container {
+        margin: -10px auto; /* Adjust container margins for better spacing */
+        height: 5000px;
+    }
+
+    .card {
+        margin-bottom: 10px; /* Add spacing between rows */
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        margin-right: 20px;
+    }
+
+    .christian h1,
+    .diana h1{
+        font-size: 30px;
+    }
+
+    .christian,
+    .diana{
+        min-height: 5000px;
+    }
+
+    .block-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    
+    /* Title Styling */
+    .block-title {
+        font-size: 1rem;
+        color: white;
+    }
+    
+    /* Description Styling */
+    .block-description {
+        font-size: .9rem;
+        color: white;
+    }
+    
+    /* Button Styling */
+    .block-button {
+        width: 100px;
+    
+    }
+
 }
